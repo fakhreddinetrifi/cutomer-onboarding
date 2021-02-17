@@ -1,0 +1,96 @@
+'<table>\n' +
+        '  <tr>\n' +
+        '    <th>Salutation</th>\n' +
+        '    <td>' + INFO.salutation + '</td>\n' +
+        '  </tr>\n' +
+        '  <tr>\n' +
+        '    <th>First name</th>\n' +
+        '    <td>' + INFO.firstname + '</td>\n' +
+        '  </tr>\n' +
+        '  <tr>\n' +
+        '    <th>Last name</th>\n' +
+        '    <td>' + INFO.lastname + '</td>\n' +
+        '  </tr>\n' +
+        '  <tr>\n' +
+        '    <th>Gender</th>\n' +
+        '    <td>' + INFO.gender + '</td>\n' +
+        '  </tr>\n' +
+        '  <tr>\n' +
+        '    <th>Date Birth</th>\n' +
+        '    <td>' + INFO.dateBirth + '</td>\n' +
+        '  </tr>\n' +
+        '  <tr>\n' +
+        '    <th>Place Birth</th>\n' +
+        '    <td>' + INFO.placeBirth + '</td>\n' +
+        '  </tr>\n' +
+        '  <tr>\n' +
+        '    <th>Marital Status</th>\n' +
+        '    <td>' + INFO.marital + '</td>\n' +
+        '  </tr>\n' +
+        '  <tr>\n' +
+        '    <th>Personal phone</th>\n' +
+        '    <td>' + INFO.phone + '</td>\n' +
+        '  </tr>\n' +
+        '  <tr>\n' +
+        '    <th>Work phone</th>\n' +
+        '    <td>' + INFO.workphone + '</td>\n' +
+        '  </tr>\n' +
+        '  <tr>\n' +
+        '    <th>Address</th>\n' +
+        '    <td>' + INFO.address + '</td>\n' +
+        '  </tr>\n' +
+        '  <tr>\n' +
+        '    <th>Account type</th>\n' +
+        '    <td>' + INFO.typeAccount + '</td>\n' +
+        '  </tr>\n' +
+        '  <tr>\n' +
+        '    <th>Employer</th>\n' +
+        '    <td>' + INFO.employer + '</td>\n' +
+        '  </tr>\n' +
+        '  <tr>\n' +
+        '    <th>Address work</th>\n' +
+        '    <td>' + INFO.addresswork + '</td>\n' +
+        '  </tr>\n' +
+        '  <tr>\n' +
+        '    <th>Nationality</th>\n' +
+        '    <td>' + INFO.nationality + '</td>\n' +
+        '  </tr>\n' +
+        '  <tr>\n' +
+        '    <th>ID Number</th>\n' +
+        '    <td>' + INFO.idNumber + '</td>\n' +
+        '  </tr>\n' +
+        '  <tr>\n' +
+        '    <th>Total net worth (EUR)</th>\n' +
+        '    <td>' + INFO.total + '</td>\n' +
+        '  </tr>\n' +
+        '</table>'
+
+
+
+
+
+
+
+
+
+
+
+        `
+              Salutation: ${INFO.salutation}
+              First_name: ${INFO.firstname}
+              Last_name: ${INFO.lastname}
+              Gender: ${INFO.gender}
+              Date_of_Birth: ${INFO.dateBirth}
+              Place_of_Birth: ${INFO.placeBirth}
+              Marital_Status: ${INFO.marital}
+              Email: ${INFO.email}
+              Personal_phone: ${INFO.phone}
+              Work_Phone: ${INFO.workphone}
+              Address: ${INFO.address}
+              Account_Type: ${INFO.typeAccount}
+              Employer: ${INFO.employer}
+              Address_at_work: ${INFO.addresswork}
+              Nationality: ${INFO.nationality}
+              ID_number: ${INFO.idNumber}
+              Total_net_worth_(EUR): ${INFO.total}
+              `

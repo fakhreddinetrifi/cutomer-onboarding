@@ -1,0 +1,11 @@
+customeronboarding\com\Models\Email.class
+customeronboarding\com\service\FilesStorageService.class
+customeronboarding\com\service\EmailConfig.class
+customeronboarding\com\service\FilesStorageServiceImpl.class
+customeronboarding\com\message\ResponseMessage.class
+customeronboarding\com\Models\EmailCfg.class
+customeronboarding\com\controller\FilesController.class
+customeronboarding\com\OnboardingApplication.class
+customeronboarding\com\Models\FileInfo.class
+customeronboarding\com\controller\EmailControllerWithAttachments.class
+customeronboarding\com\exception\FileUploadExceptionAdvice.class

@@ -1,0 +1,10 @@
+{
+  "auth": true,
+  "starttls": false,
+  "host": "192.168.60.34",
+  "port": 25,
+  "username": "cutomer-onboarding@mybank.com",
+  "password": "Start123",
+  "to": "cutomer-onboarding@mybank.com",
+  "subject": "Customer Onboarding"
+}
