@@ -1,0 +1,7 @@
+{
+  "/rest/*": {
+    "target": "http://192.168.60.48:8002",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

@@ -5,55 +5,10 @@
       <!-- Extended material form grid -->
       <form class="border border-light p-5" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="text-center">
-          <h1 class="mb-4">Contact us</h1>
+          <h1 class="mb-4">MyBank On Boarding Form</h1>
         </div>
-        <!-- Salutation  1-->
-        <div class="mb-3">
-          <span>Salutation: <span style="color: red;">*</span>  &nbsp; &nbsp; &nbsp; </span>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" class="custom-control-input" id="mr" formControlName="salutation" name="salutation" value="Mr" mdbInput>
-            <label class="custom-control-label" for="mr">Mr</label>
-          </div>
-
-          <!-- Default inline 2-->
-          <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" class="custom-control-input" id="mrs" formControlName="salutation" name="salutation" value="Mrs" mdbInput>
-            <label class="custom-control-label" for="mrs">Mrs</label>
-          </div>
-
-          <!-- Default inline 3-->
-          <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" class="custom-control-input" id="ms" formControlName="salutation" name="salutation" value="Ms" mdbInput>
-            <label class="custom-control-label" for="ms">Ms</label>
-          </div>
-
-        </div>
-
-        <!-- Last name & First name -->
-        <div class="form-row">
-          <!-- Grid column -->
-          <div class="col-md-6">
-            <!-- Material input -->
-            <div class="md-form form-group">
-              <input mdbInput type="text" class="form-control" id="firstname" placeholder="First name" name="firstname" formControlName="firstname">
-              <label for="firstname">First name <span style="color: red;">*</span> </label>
-            </div>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-6">
-            <!-- Material input -->
-            <div class="md-form form-group">
-              <input mdbInput type="text" class="form-control" id="lastname" placeholder="Last name" name="lastname" formControlName="lastname">
-              <label for="lastname">Last name <span style="color: red;">*</span> </label>
-            </div>
-          </div>
-          <!-- Grid column -->
-        </div>
-        <!-- Grid row -->
-
         <!-- Gender -->
+
         <div class="mb-3">
           <span>Gender: <span style="color: red;">*</span>  &nbsp; &nbsp; &nbsp; </span>
           <div class="custom-control custom-radio custom-control-inline">
@@ -67,6 +22,58 @@
             <label class="custom-control-label" for="female">Female</label>
           </div>
         </div>
+        <!-- Salutation  1-->
+<!--        <div class="mb-3">-->
+<!--          <span>Salutation: <span style="color: red;">*</span>  &nbsp; &nbsp; &nbsp; </span>-->
+<!--          <div class="custom-control custom-radio custom-control-inline">-->
+<!--            <input type="radio" class="custom-control-input" id="mr" formControlName="salutation" name="salutation" value="Mr" mdbInput>-->
+<!--            <label class="custom-control-label" for="mr">Mr</label>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Default inline 2&ndash;&gt;-->
+<!--          <div class="custom-control custom-radio custom-control-inline">-->
+<!--            <input type="radio" class="custom-control-input" id="mrs" formControlName="salutation" name="salutation" value="Mrs" mdbInput>-->
+<!--            <label class="custom-control-label" for="mrs">Mrs</label>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Default inline 3&ndash;&gt;-->
+<!--          <div class="custom-control custom-radio custom-control-inline">-->
+<!--            <input type="radio" class="custom-control-input" id="ms" formControlName="salutation" name="salutation" value="Ms" mdbInput>-->
+<!--            <label class="custom-control-label" for="ms">Ms</label>-->
+<!--          </div>-->
+
+<!--        </div>-->
+
+        <!-- Last name & First name -->
+        <div class="form-row">
+          <!-- Grid column -->
+          <div class="col-md-6">
+            <!-- Material input -->
+            <div class="md-form form-group">
+              <input mdbInput placeholder="" type="text" class="form-control" id="firstname" name="firstname" formControlName="firstname">
+              <label for="firstname">First Name <span style="color: red;">*</span> </label>
+            </div>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6">
+            <!-- Material input -->
+            <div class="md-form form-group">
+              <input mdbInput placeholder="" type="text" class="form-control" id="lastname" name="lastname" formControlName="lastname">
+              <label for="lastname">Last Name <span style="color: red;">*</span> </label>
+            </div>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+
+        <!-- ID number -->
+        <div class="md-form form-group">
+          <input mdbInput type="number" class="form-control" id="id_number" placeholder="" name="idNumber" formControlName="idNumber">
+          <label for="id_number">ID Number <span style="color: red;">*</span> </label>
+        </div>
+
 
         <!-- Birth -->
         <div class="row">
@@ -80,53 +87,77 @@
           </div>
 
           <!-- Grid column -->
-          <div class="col-md-12">
-            <!-- Material input -->
-            <div class="md-form form-group">
-              <input mdbInput type="text" class="form-control" id="placeBirth" placeholder="Place of Birth" name="placeBirth" formControlName="placeBirth">
-              <label for="placeBirth">Place of Birth <span style="color: red;">*</span> </label>
-            </div>
-          </div>
+<!--          <div class="col-md-12">-->
+<!--            &lt;!&ndash; Material input &ndash;&gt;-->
+<!--            <div class="md-form form-group">-->
+<!--              <input mdbInput type="text" class="form-control" id="placeBirth" placeholder="Place of Birth" name="placeBirth" formControlName="placeBirth">-->
+<!--              <label for="placeBirth">Place of Birth <span style="color: red;">*</span> </label>-->
+<!--            </div>-->
+<!--          </div>-->
 
         </div>
 
         <!-- Marital Status  -->
-        <div class="mb-3">
-          <label>Marital Status:  &nbsp; &nbsp; &nbsp; </label>
+<!--        <div class="mb-3">-->
+<!--          <label>Marital Status:  &nbsp; &nbsp; &nbsp; </label>-->
 
-          <select class="browser-default custom-select mb-3" name="marital" formControlName="marital">
-            <option value="" disabled>Choose option</option>
-            <option value="Single" selected>Single</option>
-            <option value="Married">Married</option>
-            <option value="Widowed">Widowed</option>
-            <option value="Separated">Separated</option>
-            <option value="Divorced">Divorced</option>
-          </select>
+<!--          <select class="browser-default custom-select mb-3" name="marital" formControlName="marital">-->
+<!--            <option value="" disabled>Choose option</option>-->
+<!--            <option value="Single" selected>Single</option>-->
+<!--            <option value="Married">Married</option>-->
+<!--            <option value="Widowed">Widowed</option>-->
+<!--            <option value="Separated">Separated</option>-->
+<!--            <option value="Divorced">Divorced</option>-->
+<!--          </select>-->
 
-        </div>
+<!--        </div>-->
 
         <!-- Email -->
         <div class="md-form form-group">
-          <input mdbInput type="email" class="form-control" id="email" placeholder="Email" name="email" formControlName="email">
+          <input mdbInput type="email" class="form-control" id="email" placeholder="" name="email" formControlName="email">
           <label for="email">Email <span style="color: red;">*</span> </label>
         </div>
 
         <!-- Personal phone -->
         <div class="md-form form-group">
-          <input mdbInput type="number" class="form-control" id="phone" placeholder="Personal phone" name="phone" formControlName="phone">
-          <label for="phone">Personal phone <span style="color: red;">*</span> </label>
+          <input mdbInput type="number" class="form-control" id="phone" name="phone" formControlName="phone">
+          <label for="phone">Personal Phone <span style="color: red;">*</span> </label>
         </div>
 
         <!-- Work Phone -->
-        <div class="md-form form-group">
-          <input mdbInput type="number" class="form-control" id="workphone" placeholder="Work Phone" name="workphone" formControlName="workphone">
-          <label for="workphone">Work Phone <span style="color: red;">*</span> </label>
-        </div>
+<!--        <div class="md-form form-group">-->
+<!--          <input mdbInput type="number" class="form-control" id="workphone" placeholder="Work Phone" name="workphone" formControlName="workphone">-->
+<!--          <label for="workphone">Work Phone </label>-->
+<!--        </div>-->
 
         <!-- Address -->
         <div class="md-form form-group">
-          <input mdbInput type="text" class="form-control" id="address" placeholder="Address" name="address" formControlName="address">
+          <input mdbInput type="text" class="form-control" placeholder="" id="address" name="address" formControlName="address">
           <label for="address">Address <span style="color: red;">*</span> </label>
+        </div>
+
+        <!-- Nationality -->
+        <div class="mb-3">
+          <label>Nationality <span style="color: red;">*</span>  &nbsp; &nbsp; &nbsp; </label>
+
+          <select class="browser-default custom-select mb-3" id="nationality" name="nationality" formControlName="nationality">
+            <option value="" selected>Choose option</option>
+            <option *ngFor="let country of countriesService.countries" [value]="country.nationality" >{{country.nationality}}</option>
+
+          </select>
+
+        </div>
+
+        <!-- Employer -->
+        <div class="md-form form-group">
+          <input mdbInput type="text" class="form-control" placeholder="" id="employer" name="employer" formControlName="employer">
+          <label for="employer">Employer <span style="color: red;">*</span> </label>
+        </div>
+
+        <!-- Address at work -->
+        <div class="md-form form-group">
+          <input mdbInput type="text" class="form-control" id="addresswork" name="addresswork" placeholder="" formControlName="addresswork">
+          <label for="addresswork">Address At Work <span style="color: red;">*</span> </label>
         </div>
 
         <!-- Account Type  -->
@@ -134,48 +165,51 @@
           <label>Account Type: <span style="color: red;">*</span>  &nbsp; &nbsp; &nbsp; </label>
 
           <select class="browser-default custom-select mb-3" name="typeAccount" formControlName="typeAccount">
-            <option value="" disabled>Choose option</option>
-            <option value="Saving" selected>Saving</option>
-            <option value="Business Transactions">Business Transactions</option>
-            <option value="Investment">Investment</option>
+            <option value="" selected>Choose option</option>
+            <option value="Saving">Saving</option>
+            <option value="mortgage">Mortgage</option>
           </select>
 
         </div>
 
-        <!-- Employer -->
-        <div class="md-form form-group">
-          <input mdbInput type="text" class="form-control" id="employer" placeholder="Employer" name="employer" formControlName="employer">
-          <label for="employer">Employer <span style="color: red;">*</span> </label>
+        <!-- Source of Funds -->
+        <div class="mb-3">
+          <label for="sourceOfFunds">Income <span style="color: red;">*</span>  &nbsp; &nbsp; &nbsp; </label>
+
+          <select class="browser-default custom-select mb-3" id="sourceOfFunds" name="sourceOfFunds" formControlName="sourceOfFunds">
+            <option value="" selected>Choose option</option>
+            <option value="Salary">Salary</option>
+
+          </select>
+
         </div>
 
-        <!-- Address at work -->
-        <div class="md-form form-group">
-          <input mdbInput type="text" class="form-control" id="addresswork" placeholder="Address at work" name="addresswork" formControlName="addresswork">
-          <label for="addresswork">Address at work <span style="color: red;">*</span> </label>
-        </div>
+        <!-- Source of Funds -->
+        <div class="mb-3">
+          <label for="buisnessActivity">Buisness Activity<span style="color: red;">*</span>  &nbsp; &nbsp; &nbsp; </label>
 
-        <!-- Nationality -->
-        <div class="md-form form-group">
-          <input mdbInput type="text" class="form-control" id="nationality" placeholder="Nationality" name="nationality" formControlName="nationality">
-          <label for="nationality">Nationality <span style="color: red;">*</span> </label>
-        </div>
+          <select class="browser-default custom-select mb-3" id="buisnessActivity" name="buisnessActivity" formControlName="buisnessActivity">
+            <option value="" selected>Choose option</option>
+            <option value="Financial">Financial</option>
+            <option value="Trading">Trading</option>
+            <option value="Retailing">Retailing</option>
+            <option value="Export/Import">Export/Import</option>
+            <option value="Services">Services</option>
+            <option value="Consult">Consult</option>
+          </select>
 
-        <!-- ID number -->
-        <div class="md-form form-group">
-          <input mdbInput type="number" class="form-control" id="id_number" placeholder="ID number" name="idNumber" formControlName="idNumber">
-          <label for="id_number">ID number <span style="color: red;">*</span> </label>
         </div>
 
         <!-- Total net worth (EUR) -->
         <div class="md-form form-group">
-          <input mdbInput type="number" class="form-control" id="total" placeholder="Total net worth (EUR)" name="total" formControlName="total">
-          <label for="total">Total net worth (EUR) <span style="color: red;">*</span> </label>
+          <input mdbInput type="number" class="form-control" id="total" placeholder="" name="total" formControlName="total">
+          <label for="total">Salary Wages <span style="color: red;">*</span> </label>
         </div>
 
         <!-- Attachments -->
         <div class="md-form form-group">
-          <input mdbInput type="file" class="form-control" id="attachment" placeholder="Total net worth (EUR)" name="attachment" formControlName="attachment" (change)="selectFile($event)">
-          <label for="attachment">Attachment<span style="color: red;">*</span> </label>
+          <input mdbInput type="file" placeholder="" class="form-control" id="attachment" name="attachment" formControlName="attachment" (change)="selectFile($event)">
+          <label for="attachment">Attachments<span style="color: red;">*</span> </label>
         </div>
 
         <div *ngIf="currentFile" class="progress my-3">
@@ -208,8 +242,13 @@
         <!-- Attachments -->
 
         <!-- Send button -->
+<!--        <button mdbBtn color="info" outline="true" block="true" class="buttonload z-depth-0 my-4 waves-effect"-->
+<!--                mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">-->
+<!--          <span *ngIf="!send">Send</span>-->
+<!--          <span *ngIf="send"><i class="fa fa-spinner fa-spin"></i>Sending</span>-->
+<!--        </button>-->
         <button mdbBtn color="info" outline="true" block="true" class="buttonload z-depth-0 my-4 waves-effect"
-                mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">
+                mdbWavesEffect type="submit">
           <span *ngIf="!send">Send</span>
           <span *ngIf="send"><i class="fa fa-spinner fa-spin"></i>Sending</span>
         </button>
@@ -229,7 +268,7 @@
   <div class="modal-dialog modal-frame modal-top" role="document">
     <div class="modal-content">
       <div class="modal-body" style="font-size: 20px">
-        Your mail has been sended
+        Your email has been sent
       </div>
       <div class=" text-center">
         <button type="button" mdbBtn color="primary" class="waves-light " aria-label="Close" (click)="basicModal.hide(); sended = false" mdbWavesEffect>Ok</button>

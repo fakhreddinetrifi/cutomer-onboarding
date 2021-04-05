@@ -31,8 +31,8 @@ public class EmailControllerWithAttachments {
     private JavaMailSender mailSender;
     @Autowired
     FilesStorageService storageService;
+    private static int ref = 0;
     private final Path root = Paths.get("uploads");
-    private static String[] emails;
 
     private void sendEmailMultiAttachment(final String subject, final String message, final String fromEmailAddress,
                                          final String toEmailAddress, final File[] attachments, final boolean isHtmlMail) {
@@ -84,13 +84,14 @@ public class EmailControllerWithAttachments {
             attachments[i] = new File(root + "/" + fileInfos.get(i).getName());
         }
         ObjectMapper mapper = new ObjectMapper();
-        EmailCfg emailCfg = mapper.readValue(new File("src\\main\\resources\\config.json"), EmailCfg.class);
-        sendEmailMultiAttachment(emailCfg.getSubject(),
+        EmailCfg emailCfg = mapper.readValue(new File("config.json"), EmailCfg.class);
+        sendEmailMultiAttachment(emailCfg.getSubject() + ref,
                                  email.getContent(),
                                  email.getFrom(),
                                  emailCfg.getTo(),
                                  attachments,
                                 true);
+        ref++;
         return "Email sending with multiple attachments complete.";
     }
 //

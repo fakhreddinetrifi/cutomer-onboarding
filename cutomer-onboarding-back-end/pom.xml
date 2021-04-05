@@ -12,13 +12,10 @@
     <artifactId>onboarding</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>onboarding</name>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <description>Costumer OnBoarding</description>
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <start-class>customeronboarding.com.OnboardingApplication</start-class>
     </properties>
     <dependencies>
         <dependency>
@@ -65,6 +62,7 @@
     </dependencies>
 
     <build>
+        <finalName>customer-onboardin</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

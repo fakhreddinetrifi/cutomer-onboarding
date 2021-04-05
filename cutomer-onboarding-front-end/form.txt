@@ -1,67 +1,54 @@
 '<table>\n' +
         '  <tr>\n' +
-        '    <th>Salutation</th>\n' +
-        '    <td>' + INFO.salutation + '</td>\n' +
+        '    <th>Salutation: </th><span hidden>salutation</span><td>' + INFO.salutation + '</td>\n' +
         '  </tr>\n' +
         '  <tr>\n' +
-        '    <th>First name</th>\n' +
-        '    <td>' + INFO.firstname + '</td>\n' +
+        '    <th>First name: </th><span hidden>11</span><td>' + INFO.firstname + '</td>\n' +
         '  </tr>\n' +
         '  <tr>\n' +
-        '    <th>Last name</th>\n' +
-        '    <td>' + INFO.lastname + '</td>\n' +
+        '    <th>Last name: </th><span hidden>12</span><td>' + INFO.lastname + '</td>\n' +
         '  </tr>\n' +
         '  <tr>\n' +
-        '    <th>Gender</th>\n' +
-        '    <td>' + INFO.gender + '</td>\n' +
+        '    <th>Gender: </th><span hidden>gender</span><td>' + INFO.gender + '</td>\n' +
         '  </tr>\n' +
         '  <tr>\n' +
-        '    <th>Date Birth</th>\n' +
-        '    <td>' + INFO.dateBirth + '</td>\n' +
+        '    <th>Date Birth: </th><span hidden>dateBirth</span><td>' + INFO.dateBirth + '</td>\n' +
         '  </tr>\n' +
         '  <tr>\n' +
-        '    <th>Place Birth</th>\n' +
-        '    <td>' + INFO.placeBirth + '</td>\n' +
+        '    <th>Place Birth: </th><span hidden>placeBirth</span><td>' + INFO.placeBirth + '</td>\n' +
         '  </tr>\n' +
         '  <tr>\n' +
-        '    <th>Marital Status</th>\n' +
-        '    <td>' + INFO.marital + '</td>\n' +
+        '    <th>Email </th><span hidden>16</span><td>' + INFO.email + '</td>\n' +
         '  </tr>\n' +
         '  <tr>\n' +
-        '    <th>Personal phone</th>\n' +
-        '    <td>' + INFO.phone + '</td>\n' +
+        '    <th>Marital Status: </th><span hidden>marital</span><td>' + INFO.marital + '</td>\n' +
         '  </tr>\n' +
         '  <tr>\n' +
-        '    <th>Work phone</th>\n' +
-        '    <td>' + INFO.workphone + '</td>\n' +
+        '    <th>Personal phone: </th><span hidden>14</span><td>' + INFO.phone + '</td>\n' +
         '  </tr>\n' +
         '  <tr>\n' +
-        '    <th>Address</th>\n' +
-        '    <td>' + INFO.address + '</td>\n' +
+        '    <th>Work phone: </th><span hidden>workphone</span><td>' + INFO.workphone + '</td>\n' +
         '  </tr>\n' +
         '  <tr>\n' +
-        '    <th>Account type</th>\n' +
-        '    <td>' + INFO.typeAccount + '</td>\n' +
+        '    <th>Address: </th><span hidden>46</span><td>' + INFO.address + '</td>\n' +
         '  </tr>\n' +
         '  <tr>\n' +
-        '    <th>Employer</th>\n' +
-        '    <td>' + INFO.employer + '</td>\n' +
+        '    <th>Account type: </th><span hidden>43</span><td>' + INFO.typeAccount + '</td>\n' +
         '  </tr>\n' +
         '  <tr>\n' +
-        '    <th>Address work</th>\n' +
-        '    <td>' + INFO.addresswork + '</td>\n' +
+        '    <th>Employer: </th><span hidden>employer</span><td>' + INFO.employer + '</td>\n' +
         '  </tr>\n' +
         '  <tr>\n' +
-        '    <th>Nationality</th>\n' +
-        '    <td>' + INFO.nationality + '</td>\n' +
+        '    <th>Address work: </th><span hidden>addresswork</span><td>' + INFO.addresswork + '</td>\n' +
         '  </tr>\n' +
         '  <tr>\n' +
-        '    <th>ID Number</th>\n' +
-        '    <td>' + INFO.idNumber + '</td>\n' +
+        '    <th>Nationality: </th><span hidden>44</span><td>' + INFO.nationality + '</td>\n' +
         '  </tr>\n' +
         '  <tr>\n' +
-        '    <th>Total net worth (EUR)</th>\n' +
-        '    <td>' + INFO.total + '</td>\n' +
+        '    <th>ID Number: </th><span hidden>23</span><td>' + INFO.idNumber + '</td>\n' +
+        '  </tr>\n' +
+        '  <tr>\n' +
+        '    <th>Total net worth (EUR): </th><span hidden>18</span><td>' + INFO.total + '</td>' +
         '  </tr>\n' +
         '</table>'
 

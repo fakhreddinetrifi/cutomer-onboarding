@@ -20,7 +20,7 @@ public class EmailConfig {
     public JavaMailSenderImpl mailSender() throws AddressException, MessagingException, IOException {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
         ObjectMapper mapper = new ObjectMapper();
-        EmailCfg emailCfg = mapper.readValue(new File("src\\main\\resources\\config.json"), EmailCfg.class);
+        EmailCfg emailCfg = mapper.readValue(new File("config.json"), EmailCfg.class);
         mailSender.setHost(emailCfg.getHost());
         mailSender.setPort(emailCfg.getPort());
         mailSender.setUsername(emailCfg.getUsername());

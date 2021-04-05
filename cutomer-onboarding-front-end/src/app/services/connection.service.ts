@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
 })
 export class ConnectionService {
 
-  baseUrl = 'http://localhost:8081';
+  baseUrl = 'http://192.168.60.34:8085';
   constructor(private http: HttpClient) { }
 
   sendEamil(messageContent: any) {
@@ -38,5 +38,18 @@ export class ConnectionService {
   // tslint:disable-next-line:typedef
   recieveMail(messageContent: any) {
     return this.http.post(`${this.baseUrl}/recieved`, messageContent);
+  }
+
+  maarchcourrier() {
+    return this.http.post(
+      'http://192.168.60.48:8002/rest/authenticate',
+      {
+        login: 'cchaplin',
+        password: 'maarch',
+      },
+      {
+        observe: 'response'
+      }
+    );
   }
 }

@@ -17,5 +17,7 @@ export class Info {
     public typeAccount: string,
     public marital: string,
     public workphone: number,
+    public sourceOfFunds: string,
+    public buisnessActivity: string,
   ){}
 }

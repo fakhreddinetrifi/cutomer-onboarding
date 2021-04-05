@@ -1,0 +1,10 @@
+{
+  "auth": true,
+  "starttls": false,
+  "host": "192.168.60.34",
+  "port": 25,
+  "username": "courrier@etap.com",
+  "password": "courrier",
+  "to": "courrier@etap.com",
+  "subject": "Ref#"
+}
