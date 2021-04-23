@@ -9,10 +9,14 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { FomrsComponent } from './components/fomrs/fomrs.component';
+import { ContractComponent } from './components/contract/contract.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FomrsComponent,
+    ContractComponent
   ],
   imports: [
     BrowserModule,

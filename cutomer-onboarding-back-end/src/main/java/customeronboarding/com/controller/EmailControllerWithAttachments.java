@@ -6,9 +6,7 @@ import customeronboarding.com.Models.EmailCfg;
 import customeronboarding.com.Models.FileInfo;
 import customeronboarding.com.service.FilesStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.File;
@@ -41,7 +39,7 @@ public class EmailControllerWithAttachments {
             MimeMessage mimeMessage = mailSender.createMimeMessage();
 
             // use the true flag to indicate you need a multipart message
-            MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true);
+            MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
 
             helper.setFrom(fromEmailAddress);
             helper.setTo(toEmailAddress);
@@ -61,19 +59,13 @@ public class EmailControllerWithAttachments {
 
             mailSender.send(mimeMessage);
 
-            System.out.println("Email sending with multiple attachments complete.");
-
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-//    public void setMailSender(JavaMailSender mailSender) {
-//        this.mailSender = mailSender;
-//    }
-
     @PostMapping("/sendemail")
-    public String sendMail(@RequestBody Email email) throws AddressException, MessagingException, IOException {
+    public String sendMail(@RequestBody Email email) throws IOException {
 
         List<FileInfo> fileInfos = storageService.loadAll().map(path -> {
             String filename = path.getFileName().toString();
@@ -85,6 +77,7 @@ public class EmailControllerWithAttachments {
         }
         ObjectMapper mapper = new ObjectMapper();
         EmailCfg emailCfg = mapper.readValue(new File("config.json"), EmailCfg.class);
+        System.out.println(email.getContent());
         sendEmailMultiAttachment(emailCfg.getSubject() + ref,
                                  email.getContent(),
                                  email.getFrom(),
@@ -94,18 +87,23 @@ public class EmailControllerWithAttachments {
         ref++;
         return "Email sending with multiple attachments complete.";
     }
-//
-//    @PostMapping("/recieved")
-//    public String recievedMail(@RequestBody Email email) throws AddressException, MessagingException, IOException {
-//        File[] attachments = new File[] {};
-//        ObjectMapper mapper = new ObjectMapper();
-//        EmailCfg emailCfg = mapper.readValue(new File("src\\main\\resources\\config.json"), EmailCfg.class);
-//        sendEmailMultiAttachment("test",
-//                "test",
-//                emailCfg.getTo(),
-//                email.getFrom(),
-//                attachments,
-//                true);
-//        return "sended";
-//    }
+
+    @PostMapping("/sendemailupdate")
+    public void sendMailUpdate(@RequestBody Email email) throws AddressException, MessagingException, IOException {
+        try {
+            MimeMessage mimeMessage = mailSender.createMimeMessage();
+
+            // use the true flag to indicate you need a multipart message
+            MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true);
+            helper.setFrom(email.getFrom());
+            helper.setTo(email.getTo());
+            helper.setSubject("Information has updated");
+            helper.setText(email.getContent());
+
+            mailSender.send(mimeMessage);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

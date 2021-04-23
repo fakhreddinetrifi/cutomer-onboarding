@@ -10,14 +10,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
 
 @Configuration
 public class EmailConfig {
 
     @Bean
-    public JavaMailSenderImpl mailSender() throws AddressException, MessagingException, IOException {
+    public JavaMailSenderImpl mailSender() throws IOException {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
         ObjectMapper mapper = new ObjectMapper();
         EmailCfg emailCfg = mapper.readValue(new File("config.json"), EmailCfg.class);
